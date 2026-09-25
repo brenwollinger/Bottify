@@ -236,52 +236,155 @@
     // 2) CARTELAS — coloque as suas imagens em assets/cartelas/.
     //    Mantendo estes nomes, não precisa mexer em mais nada.
     // ==========================================================
-    const LINES = [
-      { id:'universos', name:'Universos' },
-      { id:'movimento', name:'Movimento' },
-      { id:'mood', name:'Mood' },
-      { id:'essencial', name:'Essencial' },
-      { id:'filmes', name:'Filmes' },
-      { id:'series', name:'Séries' },
-      { id:'fitness', name:'Collab fitness' }
-    ];
+   const LINES = [
+  { id: 'brasilidades', name: 'Brasilidades' },
+  { id: 'esportes', name: 'Esportes' },
+  { id: 'hobbies', name: 'Hobbies' },
+  { id: 'elementos', name: 'Elementos' },
+  { id: 'series', name: 'Séries' }
+];
 
-    const CARTELAS = [
-      { id:'orbita-lilas', line:'universos', name:'Órbita Lilás', image:'assets/cartelas/universos-orbita-lilas.png' },
-      { id:'jardim', line:'universos', name:'Jardim', image:'assets/cartelas/universos-jardim.png' },
-      { id:'cafe-afeto', line:'universos', name:'Café & Afeto', image:'assets/cartelas/universos-cafe-afeto.png' },
-      { id:'sessao-azul', line:'universos', name:'Sessão Azul', image:'assets/cartelas/universos-sessao-azul.png' },
+const CARTELAS = [
 
-      { id:'impulso-coral', line:'movimento', name:'Impulso Coral', image:'assets/cartelas/movimento-impulso-coral.png' },
-      { id:'forca-marinho', line:'movimento', name:'Força Marinho', image:'assets/cartelas/movimento-forca-marinho.png' },
-      { id:'rota-turquesa', line:'movimento', name:'Rota Turquesa', image:'assets/cartelas/movimento-rota-turquesa.png' },
-      { id:'match-grafite', line:'movimento', name:'Match Grafite', image:'assets/cartelas/movimento-match-grafite.png' },
+  // =========================
+  // BRASILIDADES
+  // =========================
+  {
+    id: 'amazonia',
+    line: 'brasilidades',
+    name: 'Amazônia',
+    image: 'assets/cartelas/cartela.amazonônia.png'
+  },
+  {
+    id: 'errejota',
+    line: 'brasilidades',
+    name: 'Errejota',
+    image: 'assets/cartelas/cartela.brasileiro.png'
+  },
+  {
+    id: 'so-no-brasil',
+    line: 'brasilidades',
+    name: 'Só no Brasil',
+    image: 'assets/cartelas/cartela.sonobrasil.png'
+  },
 
-      { id:'sunny', line:'mood', name:'Sunny', image:'assets/cartelas/mood-sunny.png' },
-      { id:'cherry-pop', line:'mood', name:'Cherry Pop', image:'assets/cartelas/mood-cherry-pop.png' },
-      { id:'disco-roxo', line:'mood', name:'Disco Roxo', image:'assets/cartelas/mood-disco-roxo.png' },
-      { id:'fire', line:'mood', name:'Fire', image:'assets/cartelas/mood-fire.png' },
 
-      { id:'noite', line:'essencial', name:'Noite', image:'assets/cartelas/essencial-noite.png' },
-      { id:'aco', line:'essencial', name:'Aço', image:'assets/cartelas/essencial-aco.png' },
-      { id:'neve', line:'essencial', name:'Neve', image:'assets/cartelas/essencial-neve.png' },
-      { id:'floresta', line:'essencial', name:'Floresta', image:'assets/cartelas/essencial-floresta.png' },
+  // =========================
+  // ESPORTES
+  // =========================
+  {
+    id: 'futebol',
+    line: 'esportes',
+    name: 'Futebol',
+    image: 'assets/cartelas/cartela.futebol.png'
+  },
+  {
+    id: 'ballet',
+    line: 'esportes',
+    name: 'Ballet',
+    image: 'assets/cartelas/cartela.ballet.png'
+  },
+  {
+    id: 'volei',
+    line: 'esportes',
+    name: 'Vôlei',
+    image: 'assets/cartelas/cartela.volei.png'
+  },
+  {
+    id: 'musculacao',
+    line: 'esportes',
+    name: 'Musculação',
+    image: 'assets/cartelas/cartela.academia.png'
+  },
 
-      { id:'classicos', line:'filmes', name:'Clássicos', image:'assets/cartelas/filmes-classicos.png' },
-      { id:'cena-vermelha', line:'filmes', name:'Cena Vermelha', image:'assets/cartelas/filmes-cena-vermelha.png' },
-      { id:'outro-mundo', line:'filmes', name:'Outro Mundo', image:'assets/cartelas/filmes-outro-mundo.png' },
-      { id:'lendas', line:'filmes', name:'Lendas', image:'assets/cartelas/filmes-lendas.png' },
 
-      { id:'ultimo-episodio', line:'series', name:'Último Episódio', image:'assets/cartelas/series-ultimo-episodio.png' },
-      { id:'comfort-show', line:'series', name:'Comfort Show', image:'assets/cartelas/series-comfort-show.png' },
-      { id:'proxima-pista', line:'series', name:'Próxima Pista', image:'assets/cartelas/series-proxima-pista.png' },
-      { id:'so-mais-um', line:'series', name:'Só Mais Um', image:'assets/cartelas/series-so-mais-um.png' },
+  // =========================
+  // HOBBIES
+  // =========================
+  {
+    id: 'livros',
+    line: 'hobbies',
+    name: 'Livros',
+    image: 'assets/cartelas/cartela.livros.png'
+  },
+  {
+    id: 'filmes',
+    line: 'hobbies',
+    name: 'Filmes',
+    image: 'assets/cartelas/cartela.cinema.png'
+  },
+  {
+    id: 'pets',
+    line: 'hobbies',
+    name: 'Pets',
+    image: 'assets/cartelas/cartela.pets.png'
+  },
+  {
+    id: 'musica',
+    line: 'hobbies',
+    name: 'Música',
+    image: 'assets/cartelas/cartela.musica.png'
+  },
 
-      { id:'power-black', line:'fitness', name:'Power Black', image:'assets/cartelas/fitness-power-black.png' },
-      { id:'hot-training', line:'fitness', name:'Hot Training', image:'assets/cartelas/fitness-hot-training.png' },
-      { id:'graphite-set', line:'fitness', name:'Graphite Set', image:'assets/cartelas/fitness-graphite-set.png' },
-      { id:'flash-white', line:'fitness', name:'Flash White', image:'assets/cartelas/fitness-flash-white.png' }
-    ];
+
+  // =========================
+  // ELEMENTOS
+  // =========================
+  {
+    id: 'agua-mar',
+    line: 'elementos',
+    name: 'Água / Mar',
+    image: 'assets/cartelas/cartela.linha.elementos_agua.png'
+  },
+  {
+    id: 'terra',
+    line: 'elementos',
+    name: 'Terra',
+    image: 'assets/cartelas/cartela.linha.elementos_terra.png'
+  },
+  {
+    id: 'ar',
+    line: 'elementos',
+    name: 'Ar',
+    image: 'assets/cartelas/cartela_elementos_ar.png'
+  },
+  {
+    id: 'fogo',
+    line: 'elementos',
+    name: 'Fogo',
+    image: 'assets/cartelas/cartela.elementos_fogo.png'
+  },
+
+
+  // =========================
+  // SÉRIES
+  // =========================
+  {
+    id: 'sex-and-the-city',
+    line: 'series',
+    name: 'Sex and the City',
+    image: 'assets/cartelas/cartela.linha.series.sac.png'
+  },
+  {
+    id: 'game-of-thrones',
+    line: 'series',
+    name: 'Game of Thrones',
+    image: 'assets/cartelas/cartela.series.got.png'
+  },
+  {
+    id: 'breaking-bad',
+    line: 'series',
+    name: 'Breaking Bad',
+    image: 'assets/cartelas/cartela.serie.bd.png'
+  },
+  {
+    id: 'how-i-met-your-mother',
+    line: 'series',
+    name: 'How I Met Your Mother',
+    image: 'assets/cartelas/cartela.series.himym.png'
+  }
+
+];
 
     const state = { base:null, sticker:null, activeLine:LINES[0].id };
 
