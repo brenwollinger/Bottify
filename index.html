@@ -169,7 +169,7 @@
             <div class="line-tabs" id="lineTabs" role="tablist" aria-label="Linhas de adesivos"></div>
             <div class="sticker-grid" id="stickerGrid"></div>
           </div>
-          <div class="hint"><strong>Para inserir suas imagens:</strong> substitua os arquivos dentro de <code>assets/cartelas/</code> mantendo os nomes indicados no código. Se preferir outros nomes, altere apenas o campo <code>image</code> do catálogo no JavaScript.</div>
+          <div class="hint"><strong>Para inserir suas imagens:</strong> substitua os arquivos dentro de <code>cartelas/</code> mantendo os nomes indicados no código. Se preferir outros nomes, altere apenas o campo <code>image</code> do catálogo no JavaScript.</div>
         </section>
       </div>
 
@@ -233,158 +233,47 @@
     ];
 
     // ==========================================================
-    // 2) CARTELAS — coloque as suas imagens em assets/cartelas/.
+    // 2) CARTELAS — as imagens estão na pasta cartelas/ na raiz.
     //    Mantendo estes nomes, não precisa mexer em mais nada.
     // ==========================================================
-   const LINES = [
-  { id: 'brasilidades', name: 'Brasilidades' },
-  { id: 'esportes', name: 'Esportes' },
-  { id: 'hobbies', name: 'Hobbies' },
-  { id: 'elementos', name: 'Elementos' },
-  { id: 'series', name: 'Séries' }
-];
+    const LINES = [
+      { id:'brasilidades', name:'Brasilidades' },
+      { id:'esportes', name:'Esportes' },
+      { id:'hobbies', name:'Hobbies' },
+      { id:'elementos', name:'Elementos' },
+      { id:'series', name:'Séries' }
+    ];
 
-const CARTELAS = [
+    const CARTELAS = [
+      // BRASILIDADES
+      { id:'amazonia', line:'brasilidades', name:'Amazônia', image:'cartelas/cartela.amazonia.png' },
+      { id:'errejota', line:'brasilidades', name:'Errejota', image:'cartelas/cartela.brasileiro.png' },
+      { id:'so-no-brasil', line:'brasilidades', name:'Só no Brasil', image:'cartelas/cartela.sonobrasil.png' },
 
-  // =========================
-  // BRASILIDADES
-  // =========================
-  {
-    id: 'amazonia',
-    line: 'brasilidades',
-    name: 'Amazônia',
-    image: 'assets/cartelas/cartela.amazonônia.png'
-  },
-  {
-    id: 'errejota',
-    line: 'brasilidades',
-    name: 'Errejota',
-    image: 'assets/cartelas/cartela.brasileiro.png'
-  },
-  {
-    id: 'so-no-brasil',
-    line: 'brasilidades',
-    name: 'Só no Brasil',
-    image: 'assets/cartelas/cartela.sonobrasil.png'
-  },
+      // ESPORTES
+      { id:'futebol', line:'esportes', name:'Futebol', image:'cartelas/cartela.futebol.png' },
+      { id:'ballet', line:'esportes', name:'Ballet', image:'cartelas/cartela.ballet.png' },
+      { id:'volei', line:'esportes', name:'Vôlei', image:'cartelas/cartela.volei.png' },
+      { id:'musculacao', line:'esportes', name:'Musculação', image:'cartelas/cartela.academia.png' },
 
+      // HOBBIES
+      { id:'livros', line:'hobbies', name:'Livros', image:'cartelas/cartela.livros.png' },
+      { id:'filmes', line:'hobbies', name:'Filmes', image:'cartelas/cartela.cinema.png' },
+      { id:'pets', line:'hobbies', name:'Pets', image:'cartelas/cartela.pets.png' },
+      { id:'musica', line:'hobbies', name:'Música', image:'cartelas/cartela.musica.png' },
 
-  // =========================
-  // ESPORTES
-  // =========================
-  {
-    id: 'futebol',
-    line: 'esportes',
-    name: 'Futebol',
-    image: 'assets/cartelas/cartela.futebol.png'
-  },
-  {
-    id: 'ballet',
-    line: 'esportes',
-    name: 'Ballet',
-    image: 'assets/cartelas/cartela.ballet.png'
-  },
-  {
-    id: 'volei',
-    line: 'esportes',
-    name: 'Vôlei',
-    image: 'assets/cartelas/cartela.volei.png'
-  },
-  {
-    id: 'musculacao',
-    line: 'esportes',
-    name: 'Musculação',
-    image: 'assets/cartelas/cartela.academia.png'
-  },
+      // ELEMENTOS
+      { id:'agua-mar', line:'elementos', name:'Água / Mar', image:'cartelas/cartela.linha.elementos_agua.png' },
+      { id:'terra', line:'elementos', name:'Terra', image:'cartelas/cartela.linha.elementos_terra.png' },
+      { id:'ar', line:'elementos', name:'Ar', image:'cartelas/cartela_elementos_ar.png' },
+      { id:'fogo', line:'elementos', name:'Fogo', image:'cartelas/cartela.elementos_fogo.png' },
 
-
-  // =========================
-  // HOBBIES
-  // =========================
-  {
-    id: 'livros',
-    line: 'hobbies',
-    name: 'Livros',
-    image: 'assets/cartelas/cartela.livros.png'
-  },
-  {
-    id: 'filmes',
-    line: 'hobbies',
-    name: 'Filmes',
-    image: 'assets/cartelas/cartela.cinema.png'
-  },
-  {
-    id: 'pets',
-    line: 'hobbies',
-    name: 'Pets',
-    image: 'assets/cartelas/cartela.pets.png'
-  },
-  {
-    id: 'musica',
-    line: 'hobbies',
-    name: 'Música',
-    image: 'assets/cartelas/cartela.musica.png'
-  },
-
-
-  // =========================
-  // ELEMENTOS
-  // =========================
-  {
-    id: 'agua-mar',
-    line: 'elementos',
-    name: 'Água / Mar',
-    image: 'assets/cartelas/cartela.linha.elementos_agua.png'
-  },
-  {
-    id: 'terra',
-    line: 'elementos',
-    name: 'Terra',
-    image: 'assets/cartelas/cartela.linha.elementos_terra.png'
-  },
-  {
-    id: 'ar',
-    line: 'elementos',
-    name: 'Ar',
-    image: 'assets/cartelas/cartela_elementos_ar.png'
-  },
-  {
-    id: 'fogo',
-    line: 'elementos',
-    name: 'Fogo',
-    image: 'assets/cartelas/cartela.elementos_fogo.png'
-  },
-
-
-  // =========================
-  // SÉRIES
-  // =========================
-  {
-    id: 'sex-and-the-city',
-    line: 'series',
-    name: 'Sex and the City',
-    image: 'assets/cartelas/cartela.linha.series.sac.png'
-  },
-  {
-    id: 'game-of-thrones',
-    line: 'series',
-    name: 'Game of Thrones',
-    image: 'assets/cartelas/cartela.series.got.png'
-  },
-  {
-    id: 'breaking-bad',
-    line: 'series',
-    name: 'Breaking Bad',
-    image: 'assets/cartelas/cartela.serie.bd.png'
-  },
-  {
-    id: 'how-i-met-your-mother',
-    line: 'series',
-    name: 'How I Met Your Mother',
-    image: 'assets/cartelas/cartela.series.himym.png'
-  }
-
-];
+      // SÉRIES
+      { id:'sex-and-the-city', line:'series', name:'Sex and the City', image:'cartelas/cartela.linha.series.sac.png' },
+      { id:'game-of-thrones', line:'series', name:'Game of Thrones', image:'cartelas/cartela.series.got.png' },
+      { id:'breaking-bad', line:'series', name:'Breaking Bad', image:'cartelas/cartela.serie.bd.png' },
+      { id:'how-i-met-your-mother', line:'series', name:'How I Met Your Mother', image:'cartelas/cartela.series.himym.png' }
+    ];
 
     const state = { base:null, sticker:null, activeLine:LINES[0].id };
 
